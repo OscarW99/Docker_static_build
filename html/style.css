@@ -1,0 +1,73 @@
+/* Reset some default browser stylings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+h4 {
+    font-size: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+pre {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow-x: auto;
+    /* For horizontal scrolling, if the content overflows */
+}
+
+.info-icon {
+    height: 70px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+        /* Smaller font size for mobile */
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    pre {
+        padding: 8px;
+    }
+}

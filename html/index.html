@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OS Info</title>
+  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+</head>
+<body>
+
+<div class="container">
+  <h4><img src="channel_logo.jpg" alt="Info" class="info-icon"> Your OS Information:</h4>
+  <pre id="osInfo">Fetching...</pre>
+</div>
+
+<script>
+fetch('/os-release')
+  .then(response => response.text())
+  .then(data => {
+    let lines = data.split('\n').slice(0, 6).join('\n');
+    document.getElementById('osInfo').textContent = lines;
+  })
+  .catch(error => {
+    document.getElementById('osInfo').textContent = "Error fetching OS information.";
+  });
+</script>
+
+</body>
+</html>
