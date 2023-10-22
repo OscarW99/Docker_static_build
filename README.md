@@ -1,0 +1,1 @@
+# Docker_static_build
